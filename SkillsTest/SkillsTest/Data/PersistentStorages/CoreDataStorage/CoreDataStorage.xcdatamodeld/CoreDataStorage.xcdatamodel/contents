@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G419" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ImageEntity" representedClassName="ImageEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="lastUsedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="pathUrl" attributeType="String"/>
+    </entity>
+    <entity name="OwnerEntity" representedClassName="OwnerEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarUrl" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="login" attributeType="String"/>
+        <relationship name="repositories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RepositoryEntity" inverseName="owner" inverseEntity="RepositoryEntity"/>
+    </entity>
+    <entity name="RepositoryEntity" representedClassName="RepositoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionText" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="stargazersCount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OwnerEntity" inverseName="repositories" inverseEntity="OwnerEntity"/>
+        <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrendingRepositoriesPageEntity" inverseName="items" inverseEntity="TrendingRepositoriesPageEntity"/>
+    </entity>
+    <entity name="TrendingRepositoriesPageEntity" representedClassName="TrendingRepositoriesPageEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="savedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="RepositoryEntity" inverseName="page" inverseEntity="RepositoryEntity"/>
+    </entity>
+</model>
