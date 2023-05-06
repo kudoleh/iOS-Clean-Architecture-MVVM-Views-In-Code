@@ -28,6 +28,7 @@ iOS Project implemented with Clean Layered Architecture and MVVM. (Can be used a
 * ViewController Lifecycle Behavior
 * SwiftUI and UIKit Views in code
 * Use of UITableViewDiffableDataSource
+* Shimmering Loading
 * Error handling
 * CI Pipeline ([Travis CI + Fastlane](.travis.yml))
  
@@ -48,6 +49,10 @@ If you would like to use Networking from this example project as repo I made it 
 
 # How to use app
 Tap on repository cell to expand cell and see its details.
+
+
+https://user-images.githubusercontent.com/6785311/236620282-5cebc95e-cc02-421c-a981-23b6a02d3f1d.mp4
+
 
 
 
