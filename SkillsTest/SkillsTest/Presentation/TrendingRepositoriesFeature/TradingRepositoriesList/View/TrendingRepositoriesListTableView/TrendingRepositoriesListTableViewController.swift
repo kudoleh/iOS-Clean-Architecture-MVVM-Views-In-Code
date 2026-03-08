@@ -20,10 +20,10 @@ final class TrendingRepositoriesListTableViewController: UITableViewController {
     private let imagesRepository: ImagesRepository
     private var registeredCellTypes: Set<String> = []
     
-    private lazy var tableViewDataSource: UITableViewDiffableDataSource<Section, Cell> = { [weak self] in
-        let dataSource = UITableViewDiffableDataSource<Section, Cell>(tableView: tableView) { tableView, _, cellItem in
+    private lazy var tableViewDataSource: UITableViewDiffableDataSource<Section, Cell> = { [unowned self] in
+        let dataSource = UITableViewDiffableDataSource<Section, Cell>(tableView: self.tableView) { tableView, _, cellItem in
             
-            return self?.dequeueReusableCell(tableView, cell: cellItem)
+            return self.dequeueReusableCell(tableView, cell: cellItem)
         }
         return dataSource
     }()
