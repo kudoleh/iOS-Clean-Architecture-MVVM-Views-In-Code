@@ -55,14 +55,14 @@ final class DefaultTrendingRepositoriesListViewModel: TrendingRepositoriesListVi
         dataLoadTask = fetchTrendingRepositoriesUseCase.fetch(
             cached: { [weak self] page in
                 self?.mainQueue.async {
-                    self?.udpate(page.items)
+                    self?.update(page.items)
                 }
             },
             completion: { [weak self] result in
                 self?.mainQueue.async {
                     switch result {
                     case .success(let page):
-                        self?.udpate(page.items)
+                        self?.update(page.items)
                     case .failure(let error):
                         self?.handle(error: error)
                         self?.updateContent()
@@ -89,7 +89,7 @@ final class DefaultTrendingRepositoriesListViewModel: TrendingRepositoriesListVi
         }
     }
 
-    private func udpate(_ repositories: [Repository]) {
+    private func update(_ repositories: [Repository]) {
         items = repositories.map { TrendingRepositoriesListItemViewModel(repository: $0) }
         updateContent()
     }
