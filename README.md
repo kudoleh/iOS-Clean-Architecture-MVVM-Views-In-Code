@@ -1,7 +1,7 @@
 
 # Template iOS App using Clean Architecture and MVVM with Views written in Code
 
-iOS Project implemented with Clean Layered Architecture and MVVM. (Can be used as Template project by replacing item name “Repository”). **More information in medium post**: <a href="https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3">Medium Post about Clean Architecture + MVVM</a>
+iOS Project implemented with Clean Layered Architecture and MVVM. (Can be used as Template project by replacing item name “Repository”). **More information in medium post**: <a href="https://medium.com/olx-engineering/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3">Medium Post about Clean Architecture + MVVM</a>
 
 
 ![Alt text](README_FILES/CleanArchitecture+MVVM.png?raw=true "Clean Architecture Layers")
