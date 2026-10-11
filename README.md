@@ -41,7 +41,7 @@ iOS Project implemented with Clean Layered Architecture and MVVM. (Can be used a
 If you would like to use Networking from this example project as repo I made it availabe [here](https://github.com/kudoleh/SENetworking)
 
 ## Requirements
-* Xcode Version 11.2.1+  Min iOS version 13  Swift 5.0+  
+* Xcode 14+, Min iOS version 15.0, Swift 5.7+
 
 # How to use app
 Tap on repository cell to expand cell and see its details.
